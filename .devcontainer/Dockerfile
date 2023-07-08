@@ -20,11 +20,11 @@ FROM sharelatex/sharelatex:3
 # https://github.com/overleaf/toolkit/blob/master/doc/ce-upgrading-texlive.md#installing-packages
 RUN tlmgr install scheme-full
 
-# To convert eps to pdf
-# https://tex.stackexchange.com/a/231225/189950
-RUN apt update && apt install -y texlive-font-utils zip unzip inkscape \
-  python3-pygments python3-pip
+# # To convert eps to pdf (only needed if you didn't install the full version of TexLive)
+# # https://tex.stackexchange.com/a/231225/189950
+# RUN apt update && apt install -y texlive-font-utils zip unzip inkscape \
+#   python3-pygments python3-pip
 
-# clone the tsx and jsx lexers repo
-RUN git clone https://github.com/cad0p/jsx-lexer
-RUN cd jsx-lexer && git checkout add-typescript && pip install -e .
+# # clone the tsx and jsx lexers repos (if you need to include tsx and jsx highlighted code in your PDF)
+# RUN git clone https://github.com/cad0p/jsx-lexer
+# RUN cd jsx-lexer && git checkout add-typescript && pip install -e .
