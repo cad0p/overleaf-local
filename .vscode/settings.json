@@ -1,0 +1,16 @@
+{
+    // Change default shell to zsh: https://stackoverflow.com/a/70796646/5029932
+    // "terminal.integrated.defaultProfile.linux": "zsh",
+    // "terminal.integrated.profiles.linux": {
+    //     "zsh": {
+    //         "path": "/bin/zsh"
+    //     },
+    // },
+    "files.eol": "\n",
+    // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": false, // required 
+    "editor.formatOnType": false, // required
+    "editor.formatOnSave": true, // optional 
+    "editor.formatOnSaveMode": "file", // required to format on save
+    // "files.autoSave": "onFocusChange", // optional but recommended
+}
