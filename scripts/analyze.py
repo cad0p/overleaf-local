@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 import shutil
 
+# the following code is from https://github.com/overleaf/overleaf/issues/512#issuecomment-1467903523
+# it is a basis for allowing also the upload of files
+
 # your sharelatex data folder
 sharelatex_data = "/var/lib/sharelatex"
 refs_folder = f"{sharelatex_data}/data/user_files/"
