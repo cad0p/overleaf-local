@@ -1,43 +1,43 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
 {
-	"name": "Overleaf",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "sharelatex",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"foxx1337.autoscrolldown",
-				"ms-azuretools.vscode-docker",
-				"mhutchie.git-graph",
-				"GitLab.gitlab-workflow",
-				"eamodio.gitlens",
-				"redhat.vscode-yaml",
-				"emeraldwalk.RunOnSave",
-				"DavidAnson.vscode-markdownlint",
-				"ms-vsliveshare.vsliveshare",
-				"remcohaszing.schemastore",
-				"ms-python.python"
-			]
-		}
-	},
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// This can be used to network with other containers or with the host.
-	"forwardPorts": [
-		5050 // sharelatex
-	],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// Uncomment this to install dependencies for swagger ui (only once)
-	// "postCreateCommand": "cd swagger-ui && yarn install",
-	// This is to avoid potentially unsafe repo warning not opening git repo, dubious ownership.
-	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  "name": "Overleaf",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "sharelatex",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "foxx1337.autoscrolldown",
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "GitLab.gitlab-workflow",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "emeraldwalk.RunOnSave",
+        "DavidAnson.vscode-markdownlint",
+        "ms-vsliveshare.vsliveshare",
+        "remcohaszing.schemastore",
+        "ms-python.python"
+      ]
+    }
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {
+  // 	"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  // },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // This can be used to network with other containers or with the host.
+  "forwardPorts": [
+    5050 // sharelatex
+  ],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // Uncomment this to install dependencies for swagger ui (only once)
+  // "postCreateCommand": "cd swagger-ui && yarn install",
+  // This is to avoid potentially unsafe repo warning not opening git repo, dubious ownership.
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+  // Configure tool-specific properties.
+  // "customizations": {},
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
