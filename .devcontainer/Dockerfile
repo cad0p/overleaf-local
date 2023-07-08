@@ -1,16 +1,25 @@
-# Server Pro users:
+# # Server Pro users:
 # image: quay.io/sharelatex/sharelatex-pro
+
+# Free version users:
 FROM sharelatex/sharelatex:3
 
-# fix TexLive version to sharelatex/sharelatex-base 's one
-# https://tex.stackexchange.com/a/429718/189950
-RUN tlmgr option repository ftp://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/tlnet-final
-# install TexLive packages
-RUN tlmgr install caption xkeyval parskip etoolbox setspace emptypage \
-  titlesec moresize transparent eso-pic subfig pgf thmtools float \
-  mathtools algorithms cleveref pdfpages lipsum pdflscape soul \
-  wrapfig eso-pic subfig booktabs svg koma-script trimspaces catchfile \
-  nth enumitem minted pygmentize
+# # do this if the version of TexLive is not the same as sharelatex/sharelatex-base's one
+# # fix TexLive version to sharelatex/sharelatex-base 's one
+# # https://tex.stackexchange.com/a/429718/189950
+# RUN tlmgr option repository ftp://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/tlnet-final
+
+# # install TexLive packages
+# RUN tlmgr install caption xkeyval parskip etoolbox setspace emptypage \
+#   titlesec moresize transparent eso-pic subfig pgf thmtools float \
+#   mathtools algorithms cleveref pdfpages lipsum pdflscape soul \
+#   wrapfig eso-pic subfig booktabs svg koma-script trimspaces catchfile \
+#   nth enumitem minted pygmentize
+
+# or install the full version of TexLive
+# https://github.com/overleaf/toolkit/blob/master/doc/ce-upgrading-texlive.md#installing-packages
+RUN tlmgr install scheme-full
+
 # To convert eps to pdf
 # https://tex.stackexchange.com/a/231225/189950
 RUN apt update && apt install -y texlive-font-utils zip unzip inkscape \
