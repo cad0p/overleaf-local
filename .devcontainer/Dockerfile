@@ -16,10 +16,6 @@ FROM sharelatex/sharelatex:3
 #   wrapfig eso-pic subfig booktabs svg koma-script trimspaces catchfile \
 #   nth enumitem minted pygmentize
 
-# or install the full version of TexLive
-# https://github.com/overleaf/toolkit/blob/master/doc/ce-upgrading-texlive.md#installing-packages
-RUN tlmgr install scheme-full
-
 # # To convert eps to pdf (only needed if you didn't install the full version of TexLive)
 # # https://tex.stackexchange.com/a/231225/189950
 # RUN apt update && apt install -y texlive-font-utils zip unzip inkscape \
@@ -28,3 +24,7 @@ RUN tlmgr install scheme-full
 # # clone the tsx and jsx lexers repos (if you need to include tsx and jsx highlighted code in your PDF)
 # RUN git clone https://github.com/cad0p/jsx-lexer
 # RUN cd jsx-lexer && git checkout add-typescript && pip install -e .
+
+# or simply install the full version of TexLive
+# https://hub.docker.com/r/texlive/texlive
+FROM texlive/texlive:latest
