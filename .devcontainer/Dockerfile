@@ -25,6 +25,6 @@ FROM sharelatex/sharelatex
 # RUN git clone https://github.com/cad0p/jsx-lexer
 # RUN cd jsx-lexer && git checkout add-typescript && pip install -e .
 
-# or simply install the full version of TexLive
-# https://hub.docker.com/r/texlive/texlive
-FROM texlive/texlive:latest
+# # or simply install the full version of TexLive
+# # https://hub.docker.com/r/texlive/texlive
+# FROM texlive/texlive:latest
