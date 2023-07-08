@@ -2,7 +2,7 @@
 # image: quay.io/sharelatex/sharelatex-pro
 
 # Free version users:
-FROM sharelatex/sharelatex:3
+FROM sharelatex/sharelatex
 
 # # do this if the version of TexLive is not the same as sharelatex/sharelatex-base's one
 # # fix TexLive version to sharelatex/sharelatex-base 's one
